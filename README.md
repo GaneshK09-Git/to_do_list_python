@@ -38,4 +38,4 @@ Feel free to check the commit history for progress:
 
 ---
 
-## GUI version now available here: [link to new repo]
+## GUI version now available here: [link to new repo: https://github.com/GaneshK09-Git/To-do-PyQt5-GUI-version-]
