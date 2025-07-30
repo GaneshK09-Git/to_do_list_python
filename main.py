@@ -28,15 +28,6 @@ def main():
 
 
         elif choice == '3':
-            task = int(input("Enter the task number you want to remove: "))
-            if task in tasks:
-                tasks.remove(task)
-                print("Task successfully removed")
-            else:
-                print("No such task!")
-
-
-        elif choice == '3':
             if not tasks:
                 print("No tasks to remove")
             else:
