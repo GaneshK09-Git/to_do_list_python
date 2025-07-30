@@ -35,3 +35,7 @@ Each update reflects a concept or coding skill I've practiced.
 Feel free to check the commit history for progress:
 [GitHub Repo](https://github.com/GaneshK09-Git/to_do_list_python)
 
+
+---
+
+## GUI version now available here: [link to new repo]
