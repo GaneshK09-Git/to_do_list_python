@@ -17,22 +17,55 @@ def main():
 
 
         elif choice == '2':
-            if len(tasks) == 0:
+            if not tasks:
                 print("There are no tasks yet")
             else:
                 print("\nTasks: ")
-                for t in tasks:
-                    print("->", t)
+                print("==========================================")
+                for index, task in enumerate(tasks, start=1): # enumerate() returns an iterator that yields pairs of (index, value) for each item in an iterable.
+                    print(f"{index}. {task}")
+                print("==========================================")
 
 
         elif choice == '3':
-            task = input("Enter the task you want to remove: ")
-            tasks.remove(task)
-            print("Task successfully removed")
+            task = int(input("Enter the task number you want to remove: "))
+            if task in tasks:
+                tasks.remove(task)
+                print("Task successfully removed")
+            else:
+                print("No such task!")
+
+
+        elif choice == '3':
+            if not tasks:
+                print("No tasks to remove")
+            else:
+                # Step 1: Show tasks with numbers
+                for i, task in enumerate(tasks, start=1):
+                    print(f"{i}. {task}")
+
+                while True:
+
+                # Step 2: Ask for task number to remove
+                    try:
+                        remove = int(input("Enter the task number you want to remove: "))
+                        index = remove - 1
+                        
+                        # Step 3: Check if number is valid
+                        if 0 <= index < len(tasks):
+                            removed_task = tasks.pop(index)
+                            print(f"Removed: {removed_task}")
+                            break                               # exit the loop after successful removal
+
+                        else:
+                            print("Invalid task number, try again!")
+
+                    except ValueError:
+                        print("Enter a valid number!")
 
 
         elif choice == '4':
-            break
+            break          #Exit
 
 
         else:
